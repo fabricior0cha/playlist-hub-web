@@ -166,7 +166,7 @@ export default function CheckPlaylistPage() {
                           <Carousel>
                             <CarouselContent>
                               {link.candidates.map((candidate) => (
-                                <CarouselItem className="basis-1/5">
+                                <CarouselItem className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
                                   <Card
                                     className={`${
                                       candidate.isMain
@@ -182,7 +182,7 @@ export default function CheckPlaylistPage() {
                                       />
                                     )}
                                     <CardContent className="px-4 flex flex-col items-center ">
-                                      <div className="w-42 h-42  rounded-lg overflow-hidden shadow-xl">
+                                      <div className="lg:w-42 h-42  rounded-lg overflow-hidden shadow-xl">
                                         <img
                                           src={candidate.imageUrl}
                                           alt={candidate.name}

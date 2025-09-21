@@ -1,18 +1,12 @@
 "use client";
 
+import axios from "axios";
+import { Loader2Icon, Play } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Input } from "../../components/ui/input";
-import axios from "axios";
-import { Loader2Icon, Play } from "lucide-react";
-import { useNavigate } from "react-router";
-import { Select } from "@radix-ui/react-select";
-import {
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-} from "@/components/ui/select";
 
 export default function MigratePage() {
   const BASE_URL = "https://playlist-hub-backend.vercel.app/api/playlists";
@@ -41,6 +35,7 @@ export default function MigratePage() {
 
       return null;
     } catch (error) {
+      console.error("Error verifying platform:", error);
       return null;
     }
   };
